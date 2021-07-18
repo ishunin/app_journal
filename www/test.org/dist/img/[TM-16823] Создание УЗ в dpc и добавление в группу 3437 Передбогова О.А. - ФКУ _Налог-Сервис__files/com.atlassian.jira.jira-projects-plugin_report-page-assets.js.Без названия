@@ -1,0 +1,3 @@
+;
+/* module-key = 'com.atlassian.jira.jira-projects-plugin:report-page-assets', location = '/page/project/report/analytics.js' */
+define("jira/projects/page/report/analytics",["jira/analytics","jquery"],function(a,b){function c(){b(".reports .reports__list__report").on("click",function(f){var d=b(this);a.send({name:"jira.projects.report.clicked",data:{report:d.attr("data-report-key"),category:d.closest("ul").attr("data-category-key"),listPosition:d.closest("li").prevAll().length+1}})})}return c});;

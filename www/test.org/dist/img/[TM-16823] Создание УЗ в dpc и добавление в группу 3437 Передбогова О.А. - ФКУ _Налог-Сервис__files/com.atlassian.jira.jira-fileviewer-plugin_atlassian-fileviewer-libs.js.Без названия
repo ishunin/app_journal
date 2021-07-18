@@ -1,0 +1,3 @@
+;
+/* module-key = 'com.atlassian.jira.jira-fileviewer-plugin:atlassian-fileviewer-libs', location = '/deprecated/fileviewer-npm-backbone.js' */
+require(["jira/legacy/namespace","backbone"],function(legacyNamespace,Backbone){legacyNamespace("Backbone",window,Backbone)});;

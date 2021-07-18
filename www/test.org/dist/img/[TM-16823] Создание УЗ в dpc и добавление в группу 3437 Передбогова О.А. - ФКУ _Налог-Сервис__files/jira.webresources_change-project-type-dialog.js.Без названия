@@ -1,0 +1,84 @@
+;
+/* module-key = 'jira.webresources:change-project-type-dialog', location = '/includes/jira/dialog/changeProjectTypeDialog.soy' */
+// This file was automatically generated from changeProjectTypeDialog.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace JIRA.Templates.project.ChangeType.
+ */
+
+if (typeof JIRA == 'undefined') { var JIRA = {}; }
+if (typeof JIRA.Templates == 'undefined') { JIRA.Templates = {}; }
+if (typeof JIRA.Templates.project == 'undefined') { JIRA.Templates.project = {}; }
+if (typeof JIRA.Templates.project.ChangeType == 'undefined') { JIRA.Templates.project.ChangeType = {}; }
+
+
+JIRA.Templates.project.ChangeType.changeProjectTypeDialog = function(opt_data, opt_ignored) {
+  return '<section role="dialog" id="change-project-type-dialog-' + soy.$$escapeHtml(opt_data.projectId) + '" class="aui-layer aui-dialog2 aui-dialog2-medium" aria-hidden="true"><header class="aui-dialog2-header"><h2 class="aui-dialog2-header-main">' + soy.$$escapeHtml('\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c \u0442\u0438\u043f \u043f\u0440\u043e\u0435\u043a\u0442\u0430') + '</h2></header><div class="aui-dialog2-content"></div><footer class="aui-dialog2-footer"><div class="aui-dialog2-footer-actions form-footer"><div class="icon throbber"></div><button class="aui-button aui-button-primary dialog-change-button hidden">' + soy.$$escapeHtml('\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c') + '</button><button class="aui-button aui-button-link dialog-close-button">' + soy.$$escapeHtml('\u041e\u0442\u043c\u0435\u043d\u0438\u0442\u044c') + '</button></div></footer></section>';
+};
+if (goog.DEBUG) {
+  JIRA.Templates.project.ChangeType.changeProjectTypeDialog.soyTemplateName = 'JIRA.Templates.project.ChangeType.changeProjectTypeDialog';
+}
+
+
+JIRA.Templates.project.ChangeType.changeProjectTypeForm = function(opt_data, opt_ignored) {
+  var output = '<form class="aui change-project-type-form"><div class="form-body"><div class="aui-group project-type-change-group"><div class="aui-item">' + JIRA.Templates.project.ChangeType.projectAvatar(opt_data) + '</div><div class="aui-item project-type-select-group">' + JIRA.Templates.project.ChangeType.projectTypeDropdown({projectTypeKey: opt_data.project.projectTypeKey, projectTypes: opt_data.projectTypes}) + '</div></div></div></form><p>';
+  var helpLinkAnchor__soy21 = '<a href=' + soy.$$escapeHtml(opt_data.helpLink) + ' target="_blank">';
+  output += soy.$$filterNoAutoescape(AJS.format('\u0415\u0441\u043b\u0438 \u0432\u044b \u0438\u0437\u043c\u0435\u043d\u0438\u0442\u0435 \u0442\u0438\u043f \u043f\u0440\u043e\u0435\u043a\u0442\u0430, \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438 \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0430 \u0438 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0439 \u0434\u043b\u044f \u0432\u0430\u0448\u0438\u0445 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439 \u0442\u043e\u0436\u0435 \u0431\u0443\u0434\u0443\u0442 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u044b. {0}\u041e\u0437\u043d\u0430\u043a\u043e\u043c\u044c\u0442\u0435\u0441\u044c \u0441 \u0440\u0430\u0437\u043b\u0438\u0447\u0438\u044f\u043c\u0438 \u0437\u0434\u0435\u0441\u044c{1}',helpLinkAnchor__soy21,'</a>')) + '</p>';
+  return output;
+};
+if (goog.DEBUG) {
+  JIRA.Templates.project.ChangeType.changeProjectTypeForm.soyTemplateName = 'JIRA.Templates.project.ChangeType.changeProjectTypeForm';
+}
+
+
+JIRA.Templates.project.ChangeType.projectTypeDropdown = function(opt_data, opt_ignored) {
+  var output = '<select class="project-type-select select" name="project-type">';
+  var projectTypeList30 = opt_data.projectTypes;
+  var projectTypeListLen30 = projectTypeList30.length;
+  for (var projectTypeIndex30 = 0; projectTypeIndex30 < projectTypeListLen30; projectTypeIndex30++) {
+    var projectTypeData30 = projectTypeList30[projectTypeIndex30];
+    output += '<option class="imagebacked" data-icon="data:image/svg+xml;base64, ' + soy.$$escapeHtml(projectTypeData30.icon) + '" value="' + soy.$$escapeHtml(projectTypeData30.key) + '" ' + ((projectTypeData30.key == opt_data.projectTypeKey) ? ' selected ' : '') + '>' + soy.$$escapeHtml(projectTypeData30.formattedKey) + '</option>';
+  }
+  output += '</select>';
+  return output;
+};
+if (goog.DEBUG) {
+  JIRA.Templates.project.ChangeType.projectTypeDropdown.soyTemplateName = 'JIRA.Templates.project.ChangeType.projectTypeDropdown';
+}
+
+
+JIRA.Templates.project.ChangeType.updateTargetElement = function(opt_data, opt_ignored) {
+  return '<img src="data:image/svg+xml;base64,' + soy.$$escapeHtml(opt_data.icon) + '" class="project-type-icon" /><span>' + soy.$$escapeHtml(opt_data.formattedKey) + '</span>';
+};
+if (goog.DEBUG) {
+  JIRA.Templates.project.ChangeType.updateTargetElement.soyTemplateName = 'JIRA.Templates.project.ChangeType.updateTargetElement';
+}
+
+
+JIRA.Templates.project.ChangeType.projectAvatar = function(opt_data, opt_ignored) {
+  return '<div class="project-avatar-header"><span class="aui-avatar aui-avatar-large aui-avatar-project"><span class="aui-avatar-inner"><img src="' + soy.$$escapeHtml(opt_data.project.avatarUrls['48x48']) + '" alt="' + soy.$$escapeHtml(opt_data.project.name) + '"></span></span><div class="project-header" title="' + soy.$$escapeHtml(opt_data.project.name) + '">' + soy.$$escapeHtml(opt_data.project.name) + '</div></div>';
+};
+if (goog.DEBUG) {
+  JIRA.Templates.project.ChangeType.projectAvatar.soyTemplateName = 'JIRA.Templates.project.ChangeType.projectAvatar';
+}
+
+
+JIRA.Templates.project.ChangeType.dialogSpinner = function(opt_data, opt_ignored) {
+  return '<div class="dialog-spinner"></div>';
+};
+if (goog.DEBUG) {
+  JIRA.Templates.project.ChangeType.dialogSpinner.soyTemplateName = 'JIRA.Templates.project.ChangeType.dialogSpinner';
+}
+
+
+JIRA.Templates.project.ChangeType.successMsg = function(opt_data, opt_ignored) {
+  return '' + soy.$$escapeHtml(AJS.format('\u0412\u044b \u0442\u043e\u043b\u044c\u043a\u043e \u0447\u0442\u043e \u0438\u0437\u043c\u0435\u043d\u0438\u043b\u0438 {0} \u043d\u0430 \u0442\u0438\u043f \u043f\u0440\u043e\u0435\u043a\u0442\u0430 {1}.',opt_data.projectName,opt_data.projectTypeName));
+};
+if (goog.DEBUG) {
+  JIRA.Templates.project.ChangeType.successMsg.soyTemplateName = 'JIRA.Templates.project.ChangeType.successMsg';
+}
+;
+;
+/* module-key = 'jira.webresources:change-project-type-dialog', location = '/includes/jira/dialog/changeProjectTypeDialog.js' */
+define("jira/project/admin/change-project-type-dialog",["jira/util/formatter","jquery","underscore","jira/analytics","jira/message","jira/ajs/select/single-select","wrm/context-path"],function(e,t,o,n,a,r,c){"use strict";function p(e){return t.ajax({url:c()+"/rest/internal/2/projects/"+e+"/changetypedata",dataType:"json",contentType:"application/json",type:"GET"})}function i(r){var p=t(".project-type-select",r.dialogBody),i=p.val()[0],s=o.findWhere(r.projectTypes,{key:i});t(".dialog-change-button",r.dialogBody).attr("disabled","disabled"),t(t.ajax({url:c()+"/rest/api/2/project/"+r.projectId+"/type/"+i,dataType:"json",contentType:"application/json",type:"PUT"}).done(function(){r.changeProjectTypeDialog.hide(),r.onProjectTypeChanged&&r.onProjectTypeChanged(r.trigger,s),a.showSuccessMsg(JIRA.Templates.project.ChangeType.successMsg({projectName:r.projectName,projectTypeName:s.formattedKey})),n.send({name:"administration.projecttype.change",properties:{projectId:r.projectId,sourceProjectType:d(r.sourceProjectType),destinationProjectType:d(i)}})}).fail(function(){t(".aui-dialog2-content",r.dialogBody).prepend(aui.message.error({content:e.format("\u041d\u0430\u043c \u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044c \u043f\u0440\u0435\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435 \u043f\u0440\u043e\u0435\u043a\u0442\u0430. \u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043e\u0431\u043d\u043e\u0432\u0438\u0442\u044c \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 \u0438 \u043f\u043e\u043f\u0440\u043e\u0431\u043e\u0432\u0430\u0442\u044c \u0441\u043d\u043e\u0432\u0430. \u0415\u0441\u043b\u0438 \u044d\u0442\u043e \u043d\u0435 \u043f\u043e\u043c\u043e\u0436\u0435\u0442, \u0441\u0432\u044f\u0436\u0438\u0442\u0435\u0441\u044c \u0441\u043e {0}\u0441\u043b\u0443\u0436\u0431\u043e\u0439 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0438{1}.",'<a href="https://support.atlassian.com/">',"</a>")}))})).throbber({target:t(".throbber",r.dialogBody)})}function d(e){return e&&e.replace("_","")}function s(e,t,o){e==t?o.find(".dialog-change-button").attr("disabled","disabled"):o.find(".dialog-change-button").removeAttr("disabled")}function l(o){var n=t(JIRA.Templates.project.ChangeType.changeProjectTypeDialog({projectId:o.projectId})),a=AJS.dialog2(n);a.on("show",function(){t(".aui-dialog2-content",n).html(JIRA.Templates.project.ChangeType.dialogSpinner()),t(".dialog-spinner",n).spin(),t(".dialog-change-button",n).unbind("click").addClass("hidden")}),t(o.trigger).click(function(c){c.preventDefault(),a.show(),p(o.projectId).done(function(e){n.find(".aui-dialog2-content").html(JIRA.Templates.project.ChangeType.changeProjectTypeForm(e)),new r({element:t(".project-type-select",n),revertOnInvalid:!0,width:165}),n.find(".dialog-change-button").removeClass("hidden"),s(t(".project-type-select",n).val(),e.project.projectTypeKey,n);var c={dialogBody:n,changeProjectTypeDialog:a,projectName:e.project.name,projectTypes:e.projectTypes,trigger:o.trigger,projectId:o.projectId,onProjectTypeChanged:o.onProjectTypeChanged,sourceProjectType:e.project.projectTypeKey};t(".dialog-change-button",n).click(function(e){e.preventDefault(),i(c)}),t(".change-project-type-form",n).on("submit",function(e){e.preventDefault(),i(c)}),t(".project-type-select",n).on("change",function(o){s(t(this).val(),e.project.projectTypeKey,n)})}).fail(function(){t(".aui-dialog2-content",n).html(aui.message.error({content:e.format("\u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c \u0434\u0430\u043d\u043d\u044b\u0435, \u0442\u0440\u0435\u0431\u0443\u0435\u043c\u044b\u0435 \u0434\u043b\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0442\u0438\u043f\u0430 \u043f\u0440\u043e\u0435\u043a\u0442\u0430. \u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043e\u0431\u043d\u043e\u0432\u0438\u0442\u044c \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 \u0438 \u043f\u043e\u043f\u0440\u043e\u0431\u043e\u0432\u0430\u0442\u044c \u0441\u043d\u043e\u0432\u0430. \u0415\u0441\u043b\u0438 \u044d\u0442\u043e \u043d\u0435 \u043f\u043e\u043c\u043e\u0436\u0435\u0442, \u0441\u0432\u044f\u0436\u0438\u0442\u0435\u0441\u044c \u0441\u043e {0}\u0441\u043b\u0443\u0436\u0431\u043e\u0439 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0438{1}.",'<a href="https://support.atlassian.com/">',"</a>")}))})}),t(".dialog-close-button",n).click(function(e){e.preventDefault(),a.hide()})}return function(e){l(e)}});;

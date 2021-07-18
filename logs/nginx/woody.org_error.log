@@ -1,0 +1,3 @@
+2020/03/04 19:51:42 [error] 6#6: *12 open() "/var/www/woody.org/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: woody.org, request: "GET /favicon.ico HTTP/1.1", host: "woody.org"
+2020/03/08 19:27:29 [error] 6#6: *1 open() "/var/www/woody.org/favicon.ico" failed (2: No such file or directory), client: 172.10.1.1, server: woody.org, request: "GET /favicon.ico HTTP/1.1", host: "woody.org"
+2020/04/16 15:18:34 [error] 7#7: *3 open() "/var/www/woody.org/favicon.ico" failed (2: No such file or directory), client: 172.10.1.1, server: woody.org, request: "GET /favicon.ico HTTP/1.1", host: "woody.org"
