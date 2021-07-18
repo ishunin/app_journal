@@ -1,0 +1,21 @@
+#App Journal | Журнал учета инцидентов Дежурной смены | Система учета дисков на складе
+Окружение:
+nginx:1.17.8
+php:7.3-fpm
+mysql:8
+*Окружение для работы приложения поднимается на докерах в микросервисной архитектуре
+
+Системные требования: docker-engine, docker-compose
+
+Для запуска сборки приложения необходимо выполнить:
+- git clone https://github.com/ishunin/app_journal.git
+- docker-compose up (перейдя предварительно в директорию куда было склонированны файлы сборки приложения и где лежит файл docker-compose.yuml)
+
+*Приложение будет доступно по адресу 127.0.0.1:80
+
+Логин / Пароль для входа в систему с правами Администратора:
+admin / P@ssw0rd
+
+
+* при возникновении проблем с запуском можно удалить/очистить все данные Докера (контейнеры, образы, тома и сети)
+docker stop $(docker ps -qa) && docker rm $(docker ps -qa) && docker rmi -f $(docker images -qa ) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q)
