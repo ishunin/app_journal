@@ -18,4 +18,7 @@ admin / P@ssw0rd
 
 
 * при возникновении проблем с запуском можно удалить/очистить все данные Докера (контейнеры, образы, тома и сети)
-docker stop $(docker ps -qa) && docker rm $(docker ps -qa) && docker rmi -f $(docker images -qa ) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q)
+docker rmi $(docker images -a -q)
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker network prune
