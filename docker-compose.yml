@@ -55,11 +55,11 @@ services:
             - "3306:3306"
         volumes:
             - ./mysql:/var/lib/mysql
-           # - ./conf/mysql/my.cnf:/etc/mysql/my.cnf
+            - ./conf/mysql/my.cnf:/etc/mysql/my.cnf
             - ./logs/mysql:/var/log/mysql
         # задаем пароль для root пользователя
         environment:
-            MYSQL_ROOT_PASSWORD: 12345
+            MYSQL_ROOT_PASSWORD: admin
         networks:
             my_bridge:
                 ipv4_address: 172.10.1.30
